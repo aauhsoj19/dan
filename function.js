@@ -125,3 +125,20 @@ function createPandaHeart() {
     heart.remove();
   }, 3000);
 }
+
+const bgMusic = document.getElementById('bg-music');
+
+function startMusic() {
+  bgMusic.volume = 0.25; // soft romantic volume
+  bgMusic.play().catch(() => {
+    // autoplay blocked until interaction — silently handled
+  });
+
+  // Only start once
+  document.removeEventListener('click', startMusic);
+  document.removeEventListener('touchstart', startMusic);
+}
+
+// Start music on first interaction
+document.addEventListener('click', startMusic);
+document.addEventListener('touchstart', startMusic);
