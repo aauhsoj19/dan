@@ -88,10 +88,10 @@ body {
 --------------------------------*/
 .dog-img {
   position: absolute;
-  top: -120%;
+  top: -117%;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 290px;
   z-index: 3;
   animation: swing 1s ease-in-out infinite alternate;
   cursor: pointer;
@@ -111,7 +111,7 @@ body {
 /* Thought Bubble */
 .dog-thought {
     position: absolute;
-    top: -110%;
+    top: -105%;
     left: calc(50% + 160px);
     background: white;
     color: #333;
@@ -156,9 +156,6 @@ body {
    GIFT BOX STYLES
 --------------------------------*/
 #gift-container {
-  position: fixed;
-  bottom: 10%;
-  right: 10%;
   cursor: pointer;
   z-index: 100;
   transition: transform 0.3s ease;
@@ -237,9 +234,6 @@ body {
    ENVELOPE STYLES
 --------------------------------*/
 #envelope-container {
-  position: fixed;
-  bottom: 10%;
-  right: 22%;
   cursor: pointer;
   z-index: 100;
   transition: transform 0.3s ease;
@@ -399,6 +393,18 @@ body {
   0% { transform: translateY(40px) scale(0.8); opacity: 0; }
   100% { transform: translateY(0) scale(1); opacity: 1; }
 }
+/* ------------------------------
+   GIFT + ENVELOPE WRAPPER
+--------------------------------*/
+#gift-envelope-wrapper {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  display: flex;
+  align-items: flex-end; /* aligns bottoms nicely */
+  gap: 40px; /* space between envelope & gift */
+  z-index: 100;
+}
 
 /* ------------------------------
    SURPRISE ROSE AND PETALS
@@ -554,3 +560,4 @@ body {
   .gift-box { width: 60px; height: 55px; }
   .gift-lid { width: 70px; height: 20px; }
 }
+
