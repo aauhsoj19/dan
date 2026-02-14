@@ -142,3 +142,4 @@ function startMusic() {
 // Start music on first interaction
 document.addEventListener('click', startMusic);
 document.addEventListener('touchstart', startMusic);
+
